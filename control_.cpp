@@ -87,16 +87,20 @@ int main(int argc, char **argv) {
         s[i] = getchar();
         while (s[i] != '\n' && s[i] != EOF)
             s[++i] = getchar();
-        if (s[i] == EOF)
+        if (s[i] == EOF) {
+            cout << "good bye!" << endl;
             return 0;
+        }
             
        // while ((s[i++] = getchar()) != '\n');
         s[i] = '\0';
         code = checkString(s);
         switch (code) {
             case ALL_RIGHT:
-                cout << "OK" << endl; 
-                write(fd, s , i - 1);
+                //cout << "OK" << endl; 
+                cout << s << endl;
+                write(fd, s , i);
+                sleep(2);
                 break;
             
             case WRONG_COMMAND:
