@@ -1,1 +1,1 @@
-Creat a robot servo arm manipulator
+Проект по разработке манипулятора для робота
